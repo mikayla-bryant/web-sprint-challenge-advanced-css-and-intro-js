@@ -227,7 +227,7 @@ Create a function called `getArtistByIndex` that takes two arguments:
  * it will return `The artist at index 0 is Amedeo Modigliani`
 */
 function getArtistByIndex(array, index) {
-  return "The artist at index " + index + " is " + artists[index]["name"];
+  return "the artist at index " + index + " is " + artists[index]["name"];
 }  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -312,7 +312,7 @@ function lotsOfArt(array){
   let index = array.length;
   for (let i = 0; i < index; i++){
     if (array[i]["paintings"] > 100){
-      console.log(array[i]["name"]); 
+      return array[i]["name"]; 
     }
   } 
 }
