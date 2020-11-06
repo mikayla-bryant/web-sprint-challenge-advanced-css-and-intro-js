@@ -239,16 +239,18 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
   let index = array.length;
-  for (let i = 0; i < index; i++){
-    let yearArray = array[i]["years"].split("-");
-    let birthYear = yearArray[0]
-    let deathYear = yearArray[1];
-    let birthYearInt = parseInt(birthYear);
-    let deathYearInt = parseInt(deathYear);
+  const twenty = [];
+  for (let i = 0; i < index; i++){ // iterating through the array
+    let yearArray = array[i]["years"].split("-"); // Split "years" key into two separate strings
+    let birthYear = yearArray[0]; // defines first index in the newly created array, which is the birth year
+    let deathYear = yearArray[1]; // defines the second index in the newly created array, which is the death year
+    let birthYearInt = parseInt(birthYear); // converting the birthyear string into an integer
+    let deathYearInt = parseInt(deathYear); // converting the deathyear string into an integer
     if (birthYearInt >=1900 && birthYearInt < 2000 && deathYearInt >=1900 && deathYearInt < 2000){
-      console.log(array[i]["name"]); 
-      } 
+      twenty.push(array[i]["name"]);
+    }
   }
+  console.log(twenty);
 }
 
 
