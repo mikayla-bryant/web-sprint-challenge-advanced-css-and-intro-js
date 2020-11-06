@@ -237,10 +237,18 @@ it returns an array with names of artists who were born in and died in 20th cent
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
-}
-
+function get20s(array){
+  let index = artists.length - 1;
+  for (let i = 0; i < index; i++){
+    if (array[i]["years"].includes("1907")){
+      console.log(array[i]["name"]); 
+    } else {
+      console.log("There are no matches.")
+    } 
+  } 
+ }
+ 
+ console.log(get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -252,10 +260,10 @@ Create a function called `removeArtist` that takes two arguments:
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset and log the number 19.  
 */
-function removeArtist(/*Your Code Here*/) {
-   /*Your Code Here*/
+function removeArtist(array, index) {
+  array.splice(index, 1);
+  return array.length;
 }
-   
 
 /**
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -272,11 +280,20 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
 
-  
+function addArtist(array){
+  array.push(
+    {
+      id: 20,
+      name: "Mikayla",
+      years: "2001 - current day",
+      genre: "Web Design",
+      nationality: "American",
+      bio: "I am currently studying Full Stack Web Development. I will be completed in April 2021."
+    }
+  )
+  return array;
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Create a function called lotsOfArt() that takes one argument: 
@@ -287,8 +304,13 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  let index = array.length;
+  for (let i = 0; i < index; i++){
+    if (array[i]["paintings"] > 100){
+      console.log(array[i]["name"]); 
+    }
+  } 
 }
 
 
