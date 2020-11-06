@@ -250,7 +250,7 @@ function get20s(array){
       twenty.push(array[i]["name"]);
     }
   }
-  console.log(twenty);
+  return twenty;
 }
 
 
