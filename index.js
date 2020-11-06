@@ -310,13 +310,14 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(array){
   let index = array.length;
+  const art = [];
   for (let i = 0; i < index; i++){
     if (array[i]["paintings"] > 100){
-      return array[i]["name"]; 
+      art.push(array[i]["name"]); 
     }
   } 
+  return art;
 }
-
 
 
 
