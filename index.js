@@ -238,17 +238,19 @@ example born in 1901 and died in 1959 - included / born in 1889 and died in 1925
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-  let index = artists.length - 1;
+  let index = array.length;
   for (let i = 0; i < index; i++){
-    if (array[i]["years"].includes("1907")){
+    let yearArray = array[i]["years"].split("-");
+    let birthYear = yearArray[0]
+    let deathYear = yearArray[1];
+    let birthYearInt = parseInt(birthYear);
+    let deathYearInt = parseInt(deathYear);
+    if (birthYearInt >=1900 && birthYearInt < 2000 && deathYearInt >=1900 && deathYearInt < 2000){
       console.log(array[i]["name"]); 
-    } else {
-      console.log("There are no matches.")
-    } 
-  } 
- }
- 
- console.log(get20s(artists));
+      } 
+  }
+}
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
